@@ -1,27 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import Welcome from './Welcome/Welcome';
+import Secured from './Secured/Secured';
+import NavBar from './NavBar/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.jsadasadadad</code> and save to reload.
-        </p>
-        <p>
-          Edit <code>src/App.jsadasadadad</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>   
+      <div className="container">    
+        <NavBar />  
+        <Route exact path="/" component={Welcome} />
+        <Route path="/secured" component={Secured} />
+      </div>
+    </BrowserRouter>
   );
 }
 

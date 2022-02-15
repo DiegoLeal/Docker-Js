@@ -1,0 +1,8 @@
+{
+  "realm": "Pre Entrega 1 - keycloack",
+  "auth-server-url": "http://localhost:8080/auth/",
+  "ssl-required": "external",
+  "resource": "Pre_Entrega_1",
+  "public-client": true,
+  "confidential-port": 0
+}
